@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173f3a">
+  <link rel="icon" href="data:,">
+  <title>动物学 · 期末复习站</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-mark">Z</span>
+        <div><strong>动物学复习站</strong><small>期末冲刺题库</small></div>
+      </div>
+      <button class="mode active" data-mode="chapter">章节练习</button>
+      <button class="mode" data-mode="mock">随机模拟</button>
+      <button class="mode" data-mode="wrong">错题重练</button>
+      <p class="nav-title">章节</p>
+      <nav id="chapterNav"></nav>
+      <button id="resetProgress" class="ghost danger">清空学习记录</button>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <button id="menuButton" class="icon-button" aria-label="打开章节菜单">☰</button>
+        <div class="progress-wrap">
+          <span id="progressText">已完成 0 / 0</span>
+          <div class="progress"><i id="progressBar"></i></div>
+        </div>
+        <span class="save-state">● 自动保存</span>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow" id="chapterNumber">CHAPTER 01</p>
+          <h1 id="chapterTitle">生命原理与动物学</h1>
+          <p id="chapterSubtitle"></p>
+        </div>
+        <div class="score-card"><span>本组正确率</span><strong id="scoreValue">—</strong></div>
+      </section>
+
+      <section class="knowledge" id="knowledgePanel">
+        <button id="toggleKnowledge" aria-expanded="true">本章速记 <span>收起</span></button>
+        <ul id="knowledgeList"></ul>
+        <p class="source" id="sourceNote"></p>
+      </section>
+
+      <section class="toolbar">
+        <div class="filters" id="typeFilters">
+          <button class="active" data-type="all">全部</button>
+          <button data-type="choice">选择</button>
+          <button data-type="fill">填空</button>
+          <button data-type="judge">判断</button>
+          <button data-type="short">简答</button>
+        </div>
+        <button id="shuffleQuestions" class="ghost">↻ 打乱顺序</button>
+      </section>
+
+      <div id="questionList" class="question-list"></div>
+
+      <footer class="actions">
+        <button id="gradeAll" class="primary">提交并批改本组</button>
+        <button id="showAnswers" class="ghost">显示全部答案</button>
+      </footer>
+    </main>
+  </div>
+  <div id="toast" role="status"></div>
+  <script src="data.js"></script>
+  <script src="en.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
