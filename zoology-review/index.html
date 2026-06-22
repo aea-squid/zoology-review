@@ -66,10 +66,24 @@
         <button id="showAnswers" class="ghost">显示全部答案</button>
       </footer>
     </main>
+    <aside class="vocab-drawer" id="vocabDrawer" aria-label="重点词汇便利贴">
+      <button class="vocab-tab" id="vocabTab" aria-expanded="false"><span>KEY WORDS</span><b>重点词</b></button>
+      <div class="vocab-sheet">
+        <div class="tape"></div>
+        <button class="vocab-close" id="vocabClose" aria-label="收起便利贴">×</button>
+        <p class="vocab-kicker">CHAPTER VOCAB</p>
+        <h2 id="vocabTitle">Key Words</h2>
+        <p class="vocab-tip">点击词条可单独揭晓中文</p>
+        <button class="vocab-quiz" id="vocabQuiz">遮住中文自测</button>
+        <div id="vocabList" class="vocab-list"></div>
+      </div>
+    </aside>
   </div>
   <div id="toast" role="status"></div>
   <script src="data.js"></script>
   <script src="en.js"></script>
+  <script src="expanded.js"></script>
+  <script src="vocabulary.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
